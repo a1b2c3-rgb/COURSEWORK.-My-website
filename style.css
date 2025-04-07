@@ -32,6 +32,15 @@ section {
 .project img {
   width: 100%;
 }
+.passport-photo {
+  width: 120px;          
+  height: 160px;         
+  object-fit: cover;     
+  border-radius: 8px;    
+  border: 2px solid 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+}
+
 
 .project h3 {
   text-align: center;
@@ -39,12 +48,12 @@ section {
 
 /* Theme Mode */
 body.dark-mode {
-  background-color: #121212;
-  color: white;
+  background-color: green;
+  color: blue;
 }
 
 body.dark-mode button {
-  background-color: #333;
+  background-color: red;
   color: white;
 }
 
