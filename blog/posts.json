@@ -1,0 +1,29 @@
+[
+    {
+        "id": 1,
+        "title": "Getting Started with React Hooks",
+        "date": "2023-05-15",
+        "excerpt": "Learn how to use React Hooks to simplify your functional components",
+        "image": "images/blog1.jpg",
+        "category": "web",
+        "content": "Full article content would go here..."
+    },
+    {
+        "id": 2,
+        "title": "The Power of CSS Grid",
+        "date": "2023-04-22",
+        "excerpt": "How CSS Grid revolutionized my approach to layout design",
+        "image": "images/blog2.jpg",
+        "category": "web",
+        "content": "Full article content would go here..."
+    },
+    {
+        "id": 3,
+        "title": "Introduction to Machine Learning",
+        "date": "2023-03-10",
+        "excerpt": "Basic concepts and applications of machine learning",
+        "image": "images/blog3.jpg",
+        "category": "data",
+        "content": "Full article content would go here..."
+    }
+]
