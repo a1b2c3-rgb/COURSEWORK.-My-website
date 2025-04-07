@@ -1,113 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Website</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav id="navbar">
-            <ul>
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#blog" class="nav-link">Blog</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-                <li><button id="theme-toggle">🌓</button></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section id="home" class="section">
-            <div class="hero-content">
-                <h1 id="dynamic-greeting">Welcome</h1>
-                <p id="typed-text"></p>
-            </div>
-        </section>
+  <!-- Header Section -->
+  <header>
+    <h1 id="greeting">Welcome to My Website!</h1>
+  </header>
 
-        <section id="about" class="section">
-            <h2>About Me</h2>
-            <div class="about-container">
-                <img src="GREATNESS.jpg" alt="Profile" class="profile-img">
-                <div class="bio">
-                    <p>Hello  I'm Violet Talemwa, a driven and enthusiastic person who has a strong interest in technology and software engineering.  
-                      As an undergraduate student right now, I'm always experimenting with new tools and technologies to improve my abilities. 
-                      I've worked on a number of fascinating projects during my tech career, ranging from personal websites to IoT-based smart solutions, 
-                      and I'm always up for a challenge.  When I'm not coding, I like to study AI, machine learning, and problem-solving techniques.  
-                      I am enthusiastic about the future of technological innovation and work hard to combine creativity and technical know-how.</p>
-                    <div class="skills-container">
-                        <h3>My Skills</h3>
-                        <div class="skills" id="skills-container">
-                            <!-- Skills will be populated by JS -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- About Me Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="your-image.jpg" alt="Profile Image">
+    <p>Hello  I'm Violet Talemwa, a driven and enthusiastic person who has a strong interest in technology and software engineering.  
+        As an undergraduate student right now, I'm always experimenting with new tools and technologies to improve my abilities.  
+        I've worked on a number of fascinating projects during my tech career, ranging from personal websites to IoT-based smart solutions, 
+        and I'm always up for a challenge. When I'm not coding, I like to study AI, machine learning, and problem-solving techniques.  
+        I am enthusiastic about the future of technological innovation and work hard to combine creativity and technical know-how.</p>
+  </section>
 
-        <section id="projects" class="section">
-            <h2>My Projects</h2>
-            <div class="filter-buttons">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
-                <button class="filter-btn" data-filter="data">Data</button>
-            </div>
-            <div class="projects-grid" id="projects-container">
-                <!-- Projects loaded by JS -->
-            </div>
-        </section>
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2>My Projects</h2>
+    <button class="filter-btn" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="web">Web</button>
+    <button class="filter-btn" data-filter="data">Data</button>
 
-        <section id="blog" class="section">
-            <h2>Latest Posts</h2>
-            <div class="search-container">
-                <input type="text" id="blog-search" placeholder="Search posts...">
-            </div>
-            <div class="blog-posts" id="blog-container">
-                <!-- Blog posts loaded by JS -->
-            </div>
-        </section>
-
-        <section id="contact" class="section">
-            <h2>Contact Me</h2>
-            <form id="contact-form">
-                <div class="form-group">
-                    <input type="text" id="name" required>
-                    <label for="name">Name</label>
-                    <span class="error-message" id="name-error"></span>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" required>
-                    <label for="email">Email</label>
-                    <span class="error-message" id="email-error"></span>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" required></textarea>
-                    <label for="message">Message</label>
-                    <span class="error-message" id="message-error"></span>
-                </div>
-                <button type="submit" class="submit-btn">Send Message</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; <span id="current-year"></span> My Portfolio. All rights reserved.</p>
-    </footer>
-
-    <!-- Project Modal -->
-    <div id="project-modal" class="modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h2 id="modal-title"></h2>
-            <div id="modal-body"></div>
-        </div>
+    <div class="portfolio-items">
+      <div class="project" data-category="web">
+        <img src="project1.jpg" alt="Project 1">
+        <h3>Project 1</h3>
+      </div>
+      <div class="project" data-category="data">
+        <img src="project2.jpg" alt="Project 2">
+        <h3>Project 2</h3>
+      </div>
     </div>
+  </section>
 
-    <script src="js/script.js"></script>
+  <!-- Contact Form Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <button id="theme-toggle">Toggle Dark Mode</button>
+
+  <script src="script.js"></script>
 </body>
 </html>
