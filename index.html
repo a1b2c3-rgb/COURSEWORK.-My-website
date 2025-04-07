@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Personal Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1 id="greeting">Welcome to My Website!</h1>
+  </header>
+
+  <!-- About Me Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="your-image.jpg" alt="Profile Image">
+    <p>Brief bio and background information here.</p>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2>My Projects</h2>
+    <button class="filter-btn" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="web">Web</button>
+    <button class="filter-btn" data-filter="data">Data</button>
+
+    <div class="portfolio-items">
+      <div class="project" data-category="web">
+        <img src="project1.jpg" alt="Project 1">
+        <h3>Project 1</h3>
+      </div>
+      <div class="project" data-category="data">
+        <img src="project2.jpg" alt="Project 2">
+        <h3>Project 2</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contact-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <button id="theme-toggle">Toggle Dark Mode</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
