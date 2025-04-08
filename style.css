@@ -49,9 +49,13 @@ section {
   min-height: 100vh;
 }
 
-img {
-  max-width: 100%;
-  border-radius: 12px;
+.passport-photo {
+  width: 120px;         
+  height: 160px;         
+  object-fit: cover;     
+  border-radius: 8px;    
+  border: 2px solid #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
 }
 
 .filters {
