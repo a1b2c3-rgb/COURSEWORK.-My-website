@@ -7,6 +7,7 @@ const greetingEl = document.getElementById('greeting');
   else if (hour < 18) greeting = 'Good afternoon';
   else greeting = 'Good evening';
   greetingEl.textContent = `${greeting}, welcome to my website!`;
+document.getElementById("about-me").style.display = "block"; 
 
   // Theme Toggle
   const themeToggle = document.getElementById('themeToggle');
