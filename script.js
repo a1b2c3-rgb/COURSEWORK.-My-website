@@ -58,19 +58,16 @@ themeToggleButton.addEventListener("click", function () {
 });
 
 // Portfolio Filter
-const filterButtons = document.querySelectorAll(".filter-btn");
-const projects = document.querySelectorAll(".project");
+const filterButtons = document.querySelectorAll(".portfolio-filters button");
+const projects = document.querySelectorAll(".project-card");
 
-filterButtons.forEach((button) => {
-  button.addEventListener("click", function () {
-    const filter = this.getAttribute("data-filter");
+filterButtons.forEach(button => {
+  button.addEventListener("click", () => {
+    const category = button.getAttribute("data-filter");
 
-    projects.forEach((project) => {
-      if (filter === "all" || project.getAttribute("data-category") === filter) {
-        project.style.display = "block";
-      } else {
-        project.style.display = "none";
-      }
+    projects.forEach(project => {
+      const matches = category === "all" || project.getAttribute("data-category") === category;
+      project.style.display = matches ? "block" : "none";
     });
   });
 });
