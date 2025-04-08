@@ -3,78 +3,87 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Personal Website</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Personal portfolio website for showcasing skills, projects, and blogs">
+  <title>Violet's Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <!-- Header Section -->
   <header>
-    <h1 id="greeting">Welcome to My Website!</h1>
+    <nav>
+      <ul class="navbar">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button id="themeToggle">Toggle Theme</button></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- About Me Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <img src="GREATNESS.jpg" alt="My Photo" class="passport-photo">
-    <p>Hello  I'm Violet Talemwa, a driven and enthusiastic person who has a strong interest in technology and software engineering.  
-        As an undergraduate student right now, I'm always experimenting with new tools and technologies to improve my abilities.  
-        I've worked on a number of fascinating projects during my tech career, ranging from personal websites to IoT-based smart solutions, 
-        and I'm always up for a challenge. When I'm not coding, I like to study AI, machine learning, and problem-solving techniques.  
-        I am enthusiastic about the future of technological innovation and work hard to combine creativity and technical know-how.</p>
-  </section>
+  <main>
+    <!-- Home Section -->
+    <section id="home">
+      <h1>Welcome to My Portfolio</h1>
+      <p id="greeting"></p>
+    </section>
 
-  <!-- Portfolio Section -->
-  <section id="portfolio">
-    <h2>My Projects</h2>
-    <button class="filter-btn" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="web">Web</button>
-    <button class="filter-btn" data-filter="data">Data</button>
+    <!-- About Me Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <img src="assets/me.jpg" alt="Profile photo of Violet">
+      <p>Hello! I'm Violet, an aspiring developer passionate about tech and creativity...</p>
+    </section>
 
-    <div class="portfolio-items">
-      <div class="project" data-category="web">
-        <img src="project1.jpg" alt="Project 1">
-        <h3>Project 1</h3>
+    <!-- Projects Portfolio Section -->
+    <section id="projects">
+      <h2>My Projects</h2>
+      <div class="filters">
+        <button class="filter-btn" data-category="all">All</button>
+        <button class="filter-btn" data-category="web">Web</button>
+        <button class="filter-btn" data-category="data">Data</button>
+        <button class="filter-btn" data-category="ai">AI</button>
       </div>
-      <div class="project" data-category="data">
-        <img src="project2.jpg" alt="Project 2">
-        <h3>Project 2</h3>
+      <div class="project-list" id="projectList">
+        <!-- Projects will be injected here -->
       </div>
-    </div>
-    <div class="portfolio-grid">
-    <div class="project-card" data-category="web">
-      <h3>Personal Website</h3>
-      <p>A responsive website built with HTML, CSS, and JavaScript.</p>
-    </div>
-    <div class="project-card" data-category="data">
-      <h3>Sales Dashboard</h3>
-      <p>Data dashboard built with charts and graphs from real-time sales data.</p>
-    </div>
-    <div class="project-card" data-category="ai">
-      <h3>AI Chatbot</h3>
-      <p>A chatbot that responds intelligently using basic AI logic.</p>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Form Section -->
-  <section id="contact">
-    <h2>Contact Me</h2>
-    <form id="contact-form">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
+    <!-- Blog Section -->
+    <section id="blog">
+      <h2>Blog</h2>
+      <input type="text" id="blogSearch" placeholder="Search blogs...">
+      <div id="blogList"></div>
+    </section>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
+    <!-- Contact Form Section -->
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <span class="error" id="nameError"></span>
 
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <span class="error" id="emailError"></span>
 
-      <button type="submit">Submit</button>
-    </form>
-  </section>
+        <label for="message">Message:</label>
+        <textarea id="message" required></textarea>
+        <span class="error" id="messageError"></span>
 
-  <button id="theme-toggle">Toggle Dark Mode</button>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
 
-  <script src="script.js"></script>
+  <footer>
+    <p>&copy; 2025 Violet Talemwa. All rights reserved.</p>
+  </footer>
+
+  <script src="js/blog-data.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
