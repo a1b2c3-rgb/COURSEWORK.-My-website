@@ -1,39 +1,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-  // MODAL POPUP FUNCTIONALITY
-const modal = document.getElementById('modal');
-const modalContent = document.getElementById('modalContent');
-const modalClose = document.getElementById('modalClose');
-
-window.openModal = function(index) {
-  modalContent.innerHTML = `<h2>${projects[index].title}</h2><p>${projects[index].details}</p>`;
-  modal.style.display = 'block';
-};
-
-modalClose.addEventListener('click', () => {
-  modal.style.display = 'none';
-});
-
-window.addEventListener('click', e => {
-  if (e.target === modal) {
-    modal.style.display = 'none';
-  }
-});
-
-// ANIMATED SKILL BARS
-const skillSection = document.getElementById('skills');
-const skillBars = document.querySelectorAll('.skill-bar');
-
-window.addEventListener('scroll', () => {
-  if (skillSection && skillSection.getBoundingClientRect().top < window.innerHeight - 100) {
-    skillBars.forEach(bar => {
-      const percent = bar.dataset.percent;
-      bar.style.width = percent;
-    });
-  }
-});
-
-  const greetingEl = document.getElementById('greeting');
+const greetingEl = document.getElementById('greeting');
   const hour = new Date().getHours();
   let greeting = 'Hello';
   if (hour < 12) greeting = 'Good morning';
@@ -119,4 +86,36 @@ window.addEventListener('scroll', () => {
   });
 
   loadBlogs();
+    // MODAL POPUP FUNCTIONALITY
+const modal = document.getElementById('modal');
+const modalContent = document.getElementById('modalContent');
+const modalClose = document.getElementById('modalClose');
+
+window.openModal = function(index) {
+  modalContent.innerHTML = `<h2>${projects[index].title}</h2><p>${projects[index].details}</p>`;
+  modal.style.display = 'block';
+};
+
+modalClose.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+window.addEventListener('click', e => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+
+// ANIMATED SKILL BARS
+const skillSection = document.getElementById('skills');
+const skillBars = document.querySelectorAll('.skill-bar');
+
+window.addEventListener('scroll', () => {
+  if (skillSection && skillSection.getBoundingClientRect().top < window.innerHeight - 100) {
+    skillBars.forEach(bar => {
+      const percent = bar.dataset.percent;
+      bar.style.width = percent;
+    });
+  }
+});
 });
