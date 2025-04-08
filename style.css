@@ -65,7 +65,11 @@ section {
   object-fit: cover;     
   border-radius: 8px;    
   border: 2px solid #ccc;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+}
+#about-me {
+  display: block;
+  margin: 20px;
+  padding: 10px;
 }
 
 .filters {
@@ -76,7 +80,7 @@ section {
 }
 
 .filter-btn {
-  background-color: var(--accent);
+  background-color: yellow;
   color: white;
   border: none;
   padding: 0.5rem 1rem;
@@ -130,6 +134,13 @@ button[type="submit"] {
     align-items: center;
   }
 }
+@media screen and (max-width: 600px) {
+  #about-me {
+    padding: 20px;
+    font-size: 14px;
+  }
+}
+
 
 /* Smooth scrolling */
 html {
