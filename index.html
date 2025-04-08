@@ -27,9 +27,20 @@
   <main>
     <!-- Home Section -->
     <section id="home">
-      <h1>Welcome to My Portfolio</h1>
-      <p id="greeting"></p>
-    </section>
+  <div class="home-container">
+    <h1 id="greeting">Hello!</h1>
+    <h2>Welcome to My Personal Website</h2>
+    <p>
+      I'm <strong>Your Name</strong>, a passionate web developer and tech enthusiast.
+      I build beautiful and functional websites and love bringing creative ideas to life.
+    </p>
+    <p>
+      Browse through my projects, read my latest blog posts, or get in touch using the contact form below!
+    </p>
+    <a href="#projects" class="cta-button">View My Projects</a>
+  </div>
+</section>
+
 
     <!-- About Me Section -->
     <section id="about-me">
@@ -44,17 +55,25 @@
 
     <!-- Projects Portfolio Section -->
     <section id="projects">
-      <h2>My Projects</h2>
-      <div class="filters">
-        <button class="filter-btn" data-category="all">All</button>
-        <button class="filter-btn" data-category="web">Web</button>
-        <button class="filter-btn" data-category="data">Data</button>
-        <button class="filter-btn" data-category="ai">AI</button>
-      </div>
-      <div class="project-list" id="projectList">
-        <!-- Projects will be injected here -->
-      </div>
-    </section>
+  <h2>My Projects</h2>
+  <div class="project-list">
+    <div class="project" data-url="https://github.com/yourusername/weather-app" onclick="openExternalLink(this)">
+      <h3>Weather App</h3>
+      <p>Category: Web</p>
+    </div>
+
+    <div class="project" data-url="https://en.wikipedia.org/wiki/Artificial_intelligence" onclick="openExternalLink(this)">
+      <h3>AI Chatbot</h3>
+      <p>Category: AI</p>
+    </div>
+
+    <div class="project" data-url="https://github.com/yourusername/data-visualization" onclick="openExternalLink(this)">
+      <h3>Data Viz Dashboard</h3>
+      <p>Category: Data</p>
+    </div>
+  </div>
+</section>
+
 
     <!-- Blog Section -->
     <section id="blog">
