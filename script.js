@@ -106,7 +106,10 @@ window.addEventListener('click', e => {
     modal.style.display = 'none';
   }
 });
-
+  function openExternalLink(element) {
+  const url = element.getAttribute('data-url');
+  window.open(url, '_blank'); 
+}
 // ANIMATED SKILL BARS
 const skillSection = document.getElementById('skills');
 const skillBars = document.querySelectorAll('.skill-bar');
