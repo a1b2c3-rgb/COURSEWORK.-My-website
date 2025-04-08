@@ -9,39 +9,49 @@
 }
 
 body {
-  margin: 0;
+  margin: 10;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  display: flex;
   font-family: 'Roboto', sans-serif;
-  background-color: var(--bg-light);
+  background-color: tomato;
   color: var(--text-light);
   transition: background-color 0.3s, color 0.3s;
 }
 
 body.dark-mode {
-  background-color: var(--bg-dark);
-  color: var(--text-dark);
+  background-color: green;
+  color: green;
 }
 
 header {
-  background-color: var(--accent);
+  background-color: grey;
   color: white;
   padding: 1rem;
   position: sticky;
   top: 0;
-  z-index: 1000;
+  margin: 10;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .navbar {
   list-style: none;
   display: flex;
-  justify-content: space-around;
-  margin: 0;
-  padding: 0;
+  padding: 5px;
+  margin: 10;
+  justify-content: center;
+  align-items: center;
 }
 
 .navbar li a {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  justify-content: center;
+  align-items: center;
 }
 
 section {
@@ -76,7 +86,7 @@ section {
 }
 
 .filter-btn:hover {
-  background-color: #5e35b1;
+  background-color: red;
 }
 
 .project-list, #blogList {
