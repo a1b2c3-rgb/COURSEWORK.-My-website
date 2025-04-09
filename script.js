@@ -39,35 +39,36 @@ document.getElementById("about-me").style.display = "block";
       form.reset();
     }
   });
-
+  
   // Portfolio Filtering
-  const filterButtons = document.querySelectorAll('.filter-btn');
-  const projectList = document.getElementById('projectList');
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectList = document.getElementById('projectList');
 
-  const projects = [
-    { title: 'Books Library', category: 'web' },
-    { title: 'Evaluation Form', category: 'data' },
-    { title: 'Premier League Table', category: 'Tables' },
-    { title: 'Restaurant Website', category: 'web' }
-  ];
+const projects = [
+  { title: 'Books Library', category: 'web', link: 'https://a1b2c3-rgb.github.io/BOOKS-LIBRARY-PROJECT-/' },
+  { title: 'Evaluation Form', category: 'data', link: 'https://a1b2c3-rgb.github.io/Tables-html/Form3.html' },
+  { title: 'Premier League Table', category: 'Tables', link: 'https://a1b2c3-rgb.github.io/Tables-html/index2.html' },
+  { title: 'Restaurant Website', category: 'web', link: 'https://a1b2c3-rgb.github.io/The-Gourmet-Spot/' }
+];
 
-  function displayProjects(filter) {
-    projectList.innerHTML = '';
-    const filtered = filter === 'all' ? projects : projects.filter(p => p.category === filter);
-    filtered.forEach(p => {
-      const div = document.createElement('div');
-      div.className = 'project';
-      div.innerHTML = `<h3>${p.title}</h3><p>Category: ${p.category}</p>`;
-      projectList.appendChild(div);
-    });
-  }
-
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', () => {
-      displayProjects(btn.dataset.category);
-    });
+function displayProjects(filter) {
+  projectList.innerHTML = '';
+  const filtered = filter === 'all' ? projects : projects.filter(p => p.category === filter);
+  filtered.forEach(p => {
+    const div = document.createElement('div');
+    div.className = 'project';
+    div.innerHTML = `<h3><a href="${p.link}" target="_blank">${p.title}</a></h3><p>Category: ${p.category}</p>`;
+    projectList.appendChild(div);
   });
-  displayProjects('all');
+}
+
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    displayProjects(btn.dataset.category);
+  });
+});
+displayProjects('all');
+
 
   // Load Blogs
   const blogList = document.getElementById('blogList');
