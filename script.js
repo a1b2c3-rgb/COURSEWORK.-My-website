@@ -45,10 +45,10 @@ document.getElementById("about-me").style.display = "block";
   const projectList = document.getElementById('projectList');
 
   const projects = [
-    { title: 'Weather App', category: 'web' },
-    { title: 'Data Dashboard', category: 'data' },
-    { title: 'AI Chatbot', category: 'ai' },
-    { title: 'Portfolio Website', category: 'web' }
+    { title: 'Books Library', category: 'web' },
+    { title: 'Evaluation Form', category: 'data' },
+    { title: 'Premier League Table', category: 'Tables' },
+    { title: 'Restaurant Website', category: 'web' }
   ];
 
   function displayProjects(filter) {
